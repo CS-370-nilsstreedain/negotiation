@@ -57,7 +57,7 @@ model.eval()
 
 
 # TODO: put the path to the original image
-path = '???'
+path = '3.png'
 img = convert_to_tensor(path)
 
 
@@ -68,7 +68,7 @@ opt = optim.SGD([delta], lr=0.001)
 
 
 # TODO: heuristically decide how many times you will iterate for a successful attack
-for t in range(????):
+for t in range(2000):
 
     # run forward and make a prediction
     # Note: do not edit
@@ -77,7 +77,7 @@ for t in range(????):
 
     # TODO: Fill out the blanks with class numbers
     #       Make the model predict the image to 9
-    loss = (-nn.CrossEntropyLoss()(pred, torch.LongTensor([?])) + nn.CrossEntropyLoss()(pred, torch.LongTensor([?])))
+    loss = (-nn.CrossEntropyLoss()(pred, torch.LongTensor([3])) + nn.CrossEntropyLoss()(pred, torch.LongTensor([9])))
     
     
     # compute the perturbation, iteratively
